@@ -147,3 +147,40 @@ $(document).ready(function () {
 
 });
 
+
+const menuButton = document.querySelector('.menu-button');
+const menuAppear = document.querySelector('.menu-appear');
+
+
+menuButton.addEventListener('click', showHideMenuButton);
+var isShowHideMenu = false;
+function showHideMenuButton() {
+    // Hide menu default
+    if (!isShowHideMenu) {
+        menuAppear.classList.add('show-menu');
+        isShowHideMenu = !isShowHideMenu;
+
+
+        // document.querySelector('header').style.backgroundColor = '#00000';
+        // document.querySelector('header').style.opacity = 0.5;
+
+        // document.querySelector('main').style.backgroundColor = '#00000';
+        // document.querySelector('main').style.opacity = 0.5;
+
+        // document.querySelector('footer').style.backgroundColor = '#00000';
+        // document.querySelector('footer').style.opacity = 0.5;
+
+    }
+    else if (isShowHideMenu) {
+        menuAppear.classList.remove('show-menu');
+        isShowHideMenu = !isShowHideMenu;
+        // document.querySelector('header').style.backgroundColor = '#00000';
+        // document.querySelector('header').style.opacity = 1;
+
+        // document.querySelector('main').style.backgroundColor = '#00000';
+        // document.querySelector('main').style.opacity = 1;
+
+        // document.querySelector('footer').style.backgroundColor = '#00000';
+        // document.querySelector('footer').style.opacity = 1;
+    }
+}

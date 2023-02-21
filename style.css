@@ -9,11 +9,64 @@ header {
     justify-content: center;
     background-color: #383D40;
     height: 90px;
+    position: relative;
 }
 
 main {
     margin: 0 12.5%;
     margin-bottom: 350px;
+}
+
+.menu-button {
+    display: none;
+}
+
+.menu-appear {
+    position: absolute;
+    width: 90%;
+    left: 0;
+    top: 80px;
+    z-index: 1;
+    height: 300px;
+    display: none;
+
+}
+
+.menu-appear h1 {
+    background: #277CFB;
+    color: white;
+
+    padding: 17px 20px 20px;
+}
+
+.menu-appear ul {
+    background-color: white;
+    list-style: none;
+    padding-left: 20px;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+
+    color: #666666;
+
+}
+
+
+
+.show-menu {
+    display: block;
+}
+
+.menu-appear li {
+    padding-top: 26px;
+}
+
+.menu-appear li:last-child {
+    padding-bottom: 500px;
 }
 
 
@@ -898,6 +951,14 @@ footer {
 @media only screen and (max-width: 740px) {
     .navbar {
         display: none;
+    }
+
+
+    .menu-button {
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 15px;
     }
 
     .banner-slider img {
